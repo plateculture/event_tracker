@@ -16,6 +16,6 @@ class EventTracker::GoogleAnalytics
   end
 
   def track(event_name, properties = {})
-    %Q{ga('event_tracker.send', 'event', 'event_tracker', '#{event_name}');}
+    %Q{ga('event_tracker.send', 'event', 'event_tracker', '#{event_name}', {'nonInteraction': 1});}
   end
 end
